@@ -41,21 +41,16 @@ function fetchAndDisplayGif(event) {
             $("#gif").attr('src' ,response.data.image_url);
             setGifLoadedStatus(true);
 
-            // TODO
-            // 1. set the source attribute of our image to the image_url of the GIF
-            // 2. hide the feedback message and display the image
+            
         },
         error: function() {
-            // if something went wrong, the code in here will execute instead of the success function
-            
-            // give the user an error message
+           
             $("#feedback").text("Sorry, could not load GIF. Try again!");
             setGifLoadedStatus(false);
         }
     });
     
-    // TODO
-    // give the user a "Loading..." message while they wait
+    
     $("#feedback").text("Loading...");
     setGifLoadedStatus(false);
     //$("#feedback").removeAttr("hidden");

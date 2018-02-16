@@ -58,6 +58,14 @@
             padding-left: 5px;
             padding-right: 5px;
         }
+
+        .input-group-addon { 
+            width: 50%; 
+        } 
+        
+        .input-group { 
+            width: 100%; 
+        }
         
 
     </style>
@@ -75,27 +83,41 @@
             <input name="tag" placeholder="e.g. dance" class="form-control" id="gif-request"type="text"/>
     </div>
 
-    <div class="form-group">
+    <div class="form-group row container-fluid">
+            <nav class="navbar navbar-default">                     
+            <label for="intro_text">Prove that you are not a robot by answering this riddle:</label>               
+            <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="captcha" aria-label="captcha_label">
+                    <span id="error"></span>                    
+                    <span class="input-group-addon" id="yo">Jacksons are better than 1</span>
+                    </div>    
+                </div>
+    </div>
+
+
+    <div class="form-group row container-fluid">
             <nav class="navbar navbar-default"> 
             <label for="intro_text">Prove that you are not a robot by answering this riddle:</label>
-            <input type="text" class="form-control"id="captcha"><label for="jacksons_better" id="yo">Jacksons are better than 1.</label>
+            <div class="row">
+            <div class="col-xs-6">
+            <input type="text" class="form-control"id="captcha">
             <span id="error"></span>
-          </div>
+            </div>
+            <div class="col-xs-4" id="yo">
+            <label for="jacksons_better" class="jack">Jacksons are better than 1.</label>
+            </div>
+        </div>
+        </div>
         
-   <!-- <div class="form-group">
-            <nav class="navbar navbar-default"> 
-        <p class="jacksons">Prove that you are not a robot by answering this riddle:</p>
-        <input name="tag" id="captcha"type="text"/><label id="yo" class="jacksons">Jacksons are better than 1.</label>
-        <span id="error"></span>
-    </div>!-->
     <div class="container-fluid">
         <input class="btn btn-primary" type="submit" value="Get my Gif!">
-        <!--<input type="submit" class="alldasubs" value="Get my Gif!" /> !-->
     </form>
     </div>
+
     <div class="container-fluid">
-    <img id="gif" src="" hidden="true" />
+    <img id="gif" class="img-fluid" src="" hidden="true" />
     <p id="feedback" hidden="false"></p>
     </div>
+
 </body>
 </html>
