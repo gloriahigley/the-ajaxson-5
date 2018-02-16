@@ -2,20 +2,100 @@
 <html>
 <head>
     <title>The AJAXson 5</title>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="request-gif.js"></script>
+    <style>
+        #captcha{
+            padding-right: 50px;
+            border-radius: 3px;
+        }
+
+        #error{
+            color:red;
+            display: block;
+            font-weight: bold;
+        }
+
+        .error_none{
+            display:none;
+
+        }
+
+        input.invalid{
+            border: 2px solid red;
+        }
+
+        input.valid{
+            display:none;
+        }
+
+        .jacksons{
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        #yo{
+            font-weight: normal;
+        }
+
+        .jacksons_captcha{
+            border: 2px solid red;
+            background-color: lightpink;
+        }
+
+        .btn-primary{
+            margin-bottom: 20px;
+        }
+
+        .navbar-default{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        
+
+    </style>
 </head>
-<body>
-    <h1>The AJAXson 5</h1>
+<body class="container-fluid">
+    <div>
+        <nav class="navbar navbar-default">  
+            <h1 class="text-center">The AJAXson 5</h1>
+    </div>
+                    
+    <div class="form-group">
+            <nav class="navbar navbar-default"> 
+            <form id="form-gif-request" />
+            <label class="jacksons">What kind of Jackson 5 related gif do you want?</label>
+            <input name="tag" placeholder="e.g. dance" class="form-control" id="gif-request"type="text"/>
+    </div>
 
-    <form id="form-gif-request" />
-        <label>What kind of Jackson 5 related gif do you want?</label>
-        <input name="tag" type="text"/>
-        <input type="submit" value="Get my Gif!" />
+    <div class="form-group">
+            <nav class="navbar navbar-default"> 
+            <label for="intro_text">Prove that you are not a robot by answering this riddle:</label>
+            <input type="text" class="form-control"id="captcha"><label for="jacksons_better" id="yo">Jacksons are better than 1.</label>
+            <span id="error"></span>
+          </div>
+        
+   <!-- <div class="form-group">
+            <nav class="navbar navbar-default"> 
+        <p class="jacksons">Prove that you are not a robot by answering this riddle:</p>
+        <input name="tag" id="captcha"type="text"/><label id="yo" class="jacksons">Jacksons are better than 1.</label>
+        <span id="error"></span>
+    </div>!-->
+    <div class="container-fluid">
+        <input class="btn btn-primary" type="submit" value="Get my Gif!">
+        <!--<input type="submit" class="alldasubs" value="Get my Gif!" /> !-->
     </form>
-
-    <img id="gif" src="" hidden="true"/>
-    <p id="feedback" hidden="true`"></p>
-
+    </div>
+    <div class="container-fluid">
+    <img id="gif" src="" hidden="true" />
+    <p id="feedback" hidden="false"></p>
+    </div>
 </body>
 </html>
